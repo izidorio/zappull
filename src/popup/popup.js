@@ -1,8 +1,11 @@
+import manifest from "../../manifest.json" with { type: "json" };
 import { readNumberNameUsers } from "../scripts/read-number-name-users.js";
 import { previewUserGroup } from "../scripts/preview-users-group.js";
 import { exportUserGroup } from "../scripts/export-users-group.js";
 
 (() => {
+  document.querySelector(".tag-version").innerHTML = "Versão " + manifest.version;
+
   const btnCsv = document.getElementById("btn-csv");
   const btnPdf = document.getElementById("btn-pdf");
   const btnCopy = document.getElementById("btn-copy");
