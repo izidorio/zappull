@@ -1,7 +1,8 @@
 export async function previewUserGroup() {
   // classes da div da modal que fica acima do header do nome e envolver o nome do grupo e os usuários
   const DIV_MODAL =
-    ".x15g3fpr.x78zum5.xdt5ytf.x5yr21d.x17qophe.x6ikm8r.x10wlt62.x67bb7w.x10l6tqk.x13vifvy.xh8yej3._ahmw.copyable-area";
+    ".x15g3fpr.x78zum5.xdt5ytf.x5yr21d.x17qophe.x6ikm8r.x10wlt62.x67bb7w.x10l6tqk.x13vifvy.xh8yej3.xnpuxes.copyable-area";
+
   // classes da div que envolvem o avatar e o nome do usuário
   const DIV_WRAPPER_AVATAR_NOME = "._ak72._ak73";
   // seletor do span com o nome do grupo
