@@ -2,6 +2,13 @@ import manifest from "../../manifest.json" with { type: "json" };
 import { readNumberNameUsers } from "../scripts/read-number-name-users.js";
 import { previewUserGroup } from "../scripts/preview-users-group.js";
 import { exportUserGroup } from "../scripts/export-users-group.js";
+import {  
+  xPathDivModal, 
+  classDivWrapperAvatarNome,
+  xPathSpanNomeGrupo,
+  xPathDivCriacaoGrupo,
+  xPathSpanComNumerosNomesDoGrupo,
+} from "../scripts/constants.js";
 
 (() => {
   document.querySelector(".tag-version").innerHTML = "Versão " + manifest.version;
@@ -9,6 +16,14 @@ import { exportUserGroup } from "../scripts/export-users-group.js";
   const btnCsv = document.getElementById("btn-csv");
   const btnPdf = document.getElementById("btn-pdf");
   const btnCopy = document.getElementById("btn-copy");
+
+  const params = [
+    xPathDivModal, 
+    classDivWrapperAvatarNome, 
+    xPathSpanNomeGrupo, 
+    xPathDivCriacaoGrupo,
+  ];
+
 
   btnCsv.addEventListener("click", async (event) => {
     event.preventDefault();
@@ -24,6 +39,7 @@ import { exportUserGroup } from "../scripts/export-users-group.js";
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: exportUserGroup,
+        args: params,
       });
     });
   });
@@ -42,6 +58,7 @@ import { exportUserGroup } from "../scripts/export-users-group.js";
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: previewUserGroup,
+        args: params,
       });
     });
   });
@@ -57,9 +74,14 @@ import { exportUserGroup } from "../scripts/export-users-group.js";
         return;
       }
 
+      const params = [
+        xPathSpanComNumerosNomesDoGrupo,
+      ];
+
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
         function: readNumberNameUsers,
+        args: params,
       });
     });
   });

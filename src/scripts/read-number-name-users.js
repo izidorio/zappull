@@ -1,18 +1,16 @@
-export function readNumberNameUsers() {
+export function readNumberNameUsers(xPathSpanComNumerosNomesDoGrupo) {
   try {
-    // div com a lista de números/nomes dos participantes do grupo
-    const SPAN_COM_NUMEROS_NOMES_DO_GRUPO =
-      "#main > header > div._amie > div.x78zum5.x1cy8zhl.xisnujt.x1nxh6w3.xcgms0a.x16cd2qt > span";
+    let users = document
+    .evaluate(xPathSpanComNumerosNomesDoGrupo, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null)
+    .singleNodeValue
+    .textContent;
 
-    const classContainerParticipantes = document.querySelector(SPAN_COM_NUMEROS_NOMES_DO_GRUPO);
-
-    let users = classContainerParticipantes.textContent.replace(/,\s/gi, "\n");
     users = users.replace(/\+55\s|\+|-/gi, "");
 
     const textarea = document.createElement("textarea");
     textarea.value = users;
     textarea.style.position = "absolute";
-    textarea.style.left = "-9999px";
+    textarea.style.left = "-99999px";
     document.body.appendChild(textarea);
     textarea.select();
     document.execCommand("copy");
