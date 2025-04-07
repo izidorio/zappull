@@ -8,7 +8,8 @@ export function readNumberNameUsers(xPathSpanComNumerosNomesDoGrupo) {
     users = users.replace(/\+55\s|\+|-/gi, "");
 
     const textarea = document.createElement("textarea");
-    textarea.value = users;
+    users = users.replace(/\,/g, "\n");
+    textarea.value = users.replace(/\,/gi, /\n/).replace(/^\s/gm, "");
     textarea.style.position = "absolute";
     textarea.style.left = "-99999px";
     document.body.appendChild(textarea);
