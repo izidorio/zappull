@@ -57,7 +57,7 @@ export async function previewUserGroup(
   const modalElement = document.evaluate(xPathDivModal, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
   if (!modalElement) {
     alert(
-      "Não foi possível encontrar a modal de usuários, Clique no nome do grupo e depois em Ver tudo"
+      "Não foi possível encontrar a modal de Pesquisar membros, Clique no nome do grupo e depois em Dados do grupo clique em Ver tudo"
     );
     return;
   }

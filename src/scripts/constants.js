@@ -1,6 +1,6 @@
-// elemento modal que fica acima do header do nome e envolver o nome do grupo e os usuários
-export const xPathDivModal ='//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div'
- 
+// elemento modal que fica acima do header do nome e envolve o nome do grupo e os usuários
+export const xPathDivModal ='//*[@id="app"]/div[1]/div/span[2]/div/span/div/div/div/div/div/div'
+                           
 // classes da div que envolvem o avatar e o nome do usuário
 export const classDivWrapperAvatarNome = "._ak72._ak73";
 
