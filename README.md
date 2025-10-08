@@ -8,7 +8,7 @@ Uma extensão para o navegador Chrome e Edge que permite:
 
 ### Para instalar a extensão
 
-1. Baixe o arquivo `addon-zappul.zip` [clicando aqui neste link](https://github.com/izidorio/zappull/releases/download/v2.0.6/zappull.zip)
+1. Baixe o arquivo `addon-zappul.zip` [clicando aqui neste link](https://github.com/izidorio/zappull/releases/download/v2.0.7/zappull.zip)
 
 2. Descompacte o arquivo baixado `addon-zappull.zip`.
 
